@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>המהפכה הדיגיטלית 2026 - הרצאה מרתקת על AI | חדווה חן</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: #ffffff;
+  color: #2d3748;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tool Visual Styles */
+.tool-visual {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.tool-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tool-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .tool-visual {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .tool-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .tool-image {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(255, 20, 147, 0.3);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  line-height: 1.3;
+}
+
+.hero .subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.hero .description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+}
+
+/* Video Section Styles */
+.video-section {
+  background: #f7fafc;
+  padding: 60px 20px;
+}
+
+.video-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.video-title {
+  font-size: 2.2rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.video-description {
+  font-size: 1.2rem;
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+/* QR Code Section */
+.qr-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.qr-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(255, 20, 147, 0.15);
+  border: 2px solid #FF69B4;
+}
+
+.qr-title {
+  font-size: 2rem;
+  color: #FF1493;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.qr-description {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.qr-code-wrapper {
+  display: inline-block;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-wrapper img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.qr-instruction {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  background: #ffffff;
+  color: #FF1493;
+  padding: 18px 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  background: #2d3748;
+  color: #ffffff;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%);
+  border-radius: 2px;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.benefit-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.2);
+  border-color: #FF69B4;
+}
+
+.benefit-card h3 {
+  font-size: 1.5rem;
+  color: #FF1493;
+  margin-bottom: 15px;
+}
+
+.benefit-card p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Topics Section */
+.topics-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.topic-item {
+  background: #f7fafc;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #FF1493;
+  transition: all 0.3s ease;
+}
+
+.topic-item:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateX(-5px);
+}
+
+.topic-item h4 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.topic-item p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* Target Audience */
+.audience-section {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  padding: 60px 20px;
+}
+
+.audience-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.audience-content h3 {
+  font-size: 2.2rem;
+  color: #2d3748;
+  margin-bottom: 25px;
+}
+
+.audience-content p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Speaker Section */
+.speaker-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  background: #f7fafc;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.speaker-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.speaker-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.3);
+  border: 5px solid #FF69B4;
+}
+
+.speaker-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.speaker-info h3 {
+  font-size: 2rem;
+  color: #FF1493;
+  margin-bottom: 10px;
+}
+
+.speaker-info .title {
+  font-size: 1.3rem;
+  color: #2d3748;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.speaker-info p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Footer CTA */
+.footer-cta {
+  background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.footer-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero .description {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .speaker-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .speaker-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .video-title {
+    font-size: 1.6rem;
+  }
+  
+  .video-description {
+    font-size: 1rem;
+  }
+  
+  .qr-title {
+    font-size: 1.6rem;
+  }
+  
+  .qr-container {
+    padding: 30px 20px;
+  }
+  
+  .qr-code-wrapper img {
+    max-width: 250px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>המהפכה הדיגיטלית 2026</h1>
+  <p class="subtitle">כיצד בינה מלאכותית משנה את חיינו</p>
+  <p class="description">
+    הרצאה מרתקת שפותחת צוהר לעולם ה-AI – טכנולוגיות, כלים מעשיים, ושימושים יומיומיים שישנו את הדרך שבה אנחנו חיים, עובדים ויוצרים
+  </p>
+</section>
+
+<!-- Video Section -->
+<section class="video-section">
+  <div class="video-container">
+    <p style="font-size: 0.95rem; color: #FF1493; font-weight: 500; margin-bottom: 15px; text-align: center;">
+      💡 הווידאו נוצר על ידי העלאת תמונה בלבד באמצעות FLOW
+    </p>
+    <div class="video-wrapper">
+      <video controls preload="metadata">
+        <source src="hedvachenvideo.mp4" type="video/mp4">
+        הדפדפן שלך לא תומך בתגית וידאו.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- Lecture Overview Section -->
+<section class="container">
+  <h2 class="section-title">על ההרצאה</h2>
+  <div style="max-width: 900px; margin: 0 auto;">
+    <p style="font-size: 1.3rem; color: #2d3748; line-height: 1.8; text-align: center; margin-bottom: 30px;">
+      סקירת <strong>15 כלי AI המובילים בשוק</strong> עם דוגמאות מתחומי החיים השונים שלנו: 
+      רפואה, מוזיקה, עסקים, משפחה, חינוך ועוד.
+    </p>
+    <p style="font-size: 1.3rem; color: #4a5568; line-height: 1.8; text-align: center;">
+      ההרצאה מיועדת ל<strong>קהל הרחב</strong>, להעשרה ולפתיחת צוהר לעולם שכובש את כולנו היום.
+    </p>
+  </div>
+</section>
+
+<!-- AI Tools Overview Section -->
+<section class="container">
+  <h2 class="section-title">כלי AI המובילים בשוק</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <h3>💬 כלי שיחה וכתיבה</h3>
+      <p><strong>ChatGPT, Claude, Copilot</strong> - מובילי התעשייה ביצירת תוכן, כתיבה מקצועית וסיוע בפתרון בעיות. משמשים מיליוני משתמשים ברחבי העולם.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>🎨 יצירת תמונות</h3>
+      <p><strong>Midjourney, DALL-E, Stable Diffusion</strong> - מהפכה בעיצוב גרפי. יוצרים תמונות מדהימות מטקסט פשוט, משמשים מעצבים ויזמים ברחבי העולם.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>🎬 יצירת וידאו</h3>
+      <p><strong>Sora, Runway, Veo</strong> - הטכנולוגיה החדשה ביותר! יוצרים סרטונים מקצועיים מתיאור טקסטואלי בלבד. משנים את תעשיית הוידאו.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>⚙️ אוטומציה</h3>
+      <p><strong>Zapier, Make, n8n</strong> - חוסכים שעות עבודה! מחברים בין מערכות שונות ויוצרים תהליכים אוטומטיים שחוסכים זמן יקר.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>🔍 חיפוש מתקדם</h3>
+      <p><strong>Perplexity, Gemini</strong> - החיפוש של העתיד! מקבלים תשובות מדויקות עם מקורות מהימנים, לא רק רשימת קישורים.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>🚀 המהפכה הגדולה</h3>
+      <p>כלים אלו משנים את אופן העבודה, הלמידה והיצירה. בהרצאה תלמדו איך להשתמש בהם ביעילות מקסימלית!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="container">
+  <h2 class="section-title">למה זו הרצאה שחייבים לשמוע?</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <h3>ידע ברור ונגיש לכולם</h3>
+      <p>הסברים פשוטים וברורים, בלי מונחים טכניים מסובכים. כולם יוצאים עם הבנה אמיתית.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>כלים לחיי היומיום</h3>
+      <p>דוגמאות מעשיות לשימוש ב-AI בעבודה, בבית, ובחיים האישיים - כאן ועכשיו.</p>
+    </div>
+    <div class="benefit-card">
+      <h3>הרחבת אופקים</h3>
+      <p>הבנה מעמיקה של המהפכה הטכנולוגית והכנה לעתיד עם ביטחון.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Topics Section -->
+<section class="container">
+  <h2 class="section-title">15 כלי AI שתכירו בהרצאה</h2>
+  <div class="topics-list">
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1762917493/search_images/89ef09b59db2bf838c7f3d1cf43d178eec9f50b9.jpg" alt="ChatGPT לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763622046/search_images/17ddf67693954a962fd140dd8083c5debcb645f0.jpg" alt="ChatGPT" class="tool-image">
+      </div>
+      <h4>ChatGPT</h4>
+      <p>כתיבת מיילים, מכתבים, סיכום מידע, עזרה בכתיבה למבוגרים וילדים. <strong>דוגמאות:</strong> סיכום דוחות רפואיים, כתיבת מכתבי עבודה, עזרה בשיעורי בית לילדים</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1765363524/search_images/d9cbcdde0956019964a9632e3d1befa854761128.jpg" alt="Copilot לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1769934539/search_images/7d7aace81c971bd285f9710da977b82784cf67bc.jpg" alt="Copilot" class="tool-image">
+      </div>
+      <h4>Copilot</h4>
+      <p>עוזר אישי חכם מבית Microsoft לכתיבה, חיפוש ויצירתיות</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763489374/search_images/7756c97114f01a055868b2ee0fb76b73116a8504.jpg" alt="Claude לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1762951021/search_images/b25f1f30174119df88628447bf9551169fd88570.jpg" alt="Claude" class="tool-image">
+      </div>
+      <h4>Claude</h4>
+      <p>הבנת מסמכים, סיכומים וניתוח מידע בצורה פשוטה</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763465150/search_images/a6e52659b58c8c7e7b9d7d893b915f19bc6af9c7.jpg" alt="Gemini לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763484387/search_images/c35c4a925e17c7cfd227796392841e755bbbf21b.jpg" alt="Gemini" class="tool-image">
+      </div>
+      <h4>Gemini</h4>
+      <p>חיבור למייל, תמונות ושירותים יומיומיים של Google</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1762958168/search_images/ece90689d2f4098e8794283e5cbd159494277890.jpg" alt="Flow לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1769934563/search_images/4fb21d66f8a13ecb4b7d189424f2e4bdf6008720.jpg" alt="Flow" class="tool-image">
+      </div>
+      <h4>Flow</h4>
+      <p>דוגמאות לחיסכון בזמן במשימות חוזרות</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1769442795/search_images/2257bcf022fc49d85a569762fba950d82a470de2.jpg" alt="Midjourney לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1769934546/search_images/2e4a584b2e9652e253a6fd5b4dbe003556e4cd50.jpg" alt="Midjourney" class="tool-image">
+      </div>
+      <h4>Midjourney</h4>
+      <p>יצירת תמונות מיוחדות, ברכות, הזמנות ותכנים יפים לרשתות חברתיות. <strong>דוגמאות:</strong> עיצוב לוגו לעסק, הזמנות לאירועים משפחתיים, תמונות שיווקיות</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763170810/search_images/4ed566d9823e3914f73002bd0063fbd587aaa26a.jpg" alt="DALL-E לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1769934546/search_images/4c6c3a13384434b6287843f98c444b14961fc30d.jpg" alt="DALL-E" class="tool-image">
+      </div>
+      <h4>DALL-E</h4>
+      <p>עיצוב תמונות פשוט וקל לכל צורך</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763536827/search_images/72c35ac32f0da2617967fbcbaeb0efd11cd38061.jpg" alt="Stable Diffusion לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763996099/search_images/086af9faf83f7ac80febcf95fad18ae77e832b4a.jpg" alt="Stable Diffusion" class="tool-image">
+      </div>
+      <h4>Stable Diffusion</h4>
+      <p>יצירת תמונות מתקדמות וחופשיות לשימוש מסחרי</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763066978/search_images/04c556b5717be57cf45c620fc2a2fb9a3b8d1206.jpg" alt="Sora לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763965184/search_images/8c753b3f5f5dc5e0dd1471eeadec64b3f6fba0f7.jpg" alt="Sora" class="tool-image">
+      </div>
+      <h4>Sora</h4>
+      <p>יצירת סרטונים קצרים מטקסט – טכנולוגיית העתיד</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763536810/search_images/ab0308f6103abe3df2d76e73f0c0e94c4e729611.jpg" alt="Runway לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1767011956/search_images/54fd229ce6b895a6ae32e6a17e3ea707654f5c8f.jpg" alt="Runway" class="tool-image">
+      </div>
+      <h4>Runway</h4>
+      <p>עריכת סרטונים משפחתיים ואישיים בקלות</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1769934348/search_images/f7e3a8d56e48285131886781db5da2449bdce8dc.jpg" alt="Veo לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1769934557/search_images/665b573b2506bb31c8aa5ce03eb677a6db5beca8.jpg" alt="Veo" class="tool-image">
+      </div>
+      <h4>Veo</h4>
+      <p>הפיכת רעיונות לסרטונים בקלות</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1768485033/search_images/b6f9db01843845cfb3261116a8c5af65d60ed413.jpg" alt="n8n לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1763454487/search_images/5828b119cf106e9cc5b73b2f7320346f5f21e5be.jpg" alt="n8n" class="tool-image">
+      </div>
+      <h4>n8n</h4>
+      <p>אוטומציה חכמה למשימות עבודה יומיומיות</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1766045309/search_images/3ef41a9bec350e3dc6e55dacfc27b648c5f6ab1b.jpg" alt="Zapier לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1764761179/search_images/6ec171694d92ab9b1c977d51de04a3b672ddb245.jpg" alt="Zapier" class="tool-image">
+      </div>
+      <h4>Zapier</h4>
+      <p>חיבור כלים שונים ויצירת תהליכי עבודה אוטומטיים. <strong>דוגמאות:</strong> שמירת מיילים חשובים אוטומטית, חיבור CRM לשיווק, סנכרון יומן עבודה</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1768980121/search_images/867591fbce70419a3e45a5bca379cf0328834cc6.jpg" alt="Make לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1769934563/search_images/82976b982a6b40ec54d84a7f0fa30658d60a0737.jpg" alt="Make" class="tool-image">
+      </div>
+      <h4>Make</h4>
+      <p>בניית זרימות עבודה ויזואליות בלי קוד</p>
+    </div>
+    <div class="topic-item">
+      <div class="tool-visual">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1762904960/search_images/cf91f5c12a63437db021a94cb4e26c4091749946.jpg" alt="Perplexity לוגו" class="tool-logo">
+        <img src="https://pplx-res.cloudinary.com/image/upload/v1762971512/search_images/10fff9f45b0e0317528c56b003ba0c7c80651ed6.jpg" alt="Perplexity" class="tool-image">
+      </div>
+      <h4>Perplexity</h4>
+      <p>מציאת מידע, מתכונים, רעיונות לטיולים, תשובות לשאלות יומיומיות</p>
+    </div>
+  </div>
+</section>
+
+<!-- Target Audience Section -->
+<section class="audience-section">
+  <div class="audience-content">
+    <h3>למי זה מתאים?</h3>
+    <p>ההרצאה פתוחה ומתאימה <strong>לקהל הרחב</strong> – לכל מי שרוצה להכיר את עולם ה-AI בצורה פשוטה, ברורה ומעשית.</p>
+    <p>מבוגרים, צעירים, משפחות, ארגונים, מרכזים קהילתיים, רשויות מקומיות, מתנ"סים, אירועי תרבות והעשרה</p>
+  </div>
+</section>
+
+<!-- Speaker Section -->
+<section class="container">
+  <h2 class="section-title">המרצה</h2>
+  <div class="speaker-section">
+    <div class="speaker-content">
+      <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/143ab25d-d480-4287-950a-5d2e9ebf73d6" alt="חדווה חן" class="speaker-image">
+      <div class="speaker-info">
+        <h3>חדווה חן</h3>
+        <p class="title">מרצה, יועצת ומומחית AI</p>
+        <p>חדווה חן היא מרצה בתחום הבינה המלאכותית, עם ניסיון עשיר בהדרכה והנגשת טכנולוגיות מתקדמות לקהל הרחב. בעלת יכולת ייחודית להפוך מושגים מורכבים לפשוטים ומובנים לכולם.</p>
+        <p>ההרצאה מועברת באווירה נעימה ומעוררת השראה, עם דגש על ידע מעשי שאפשר ליישם מיד בחיי היומיום.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer CTA -->
+<section class="footer-cta" id="contact">
+  <h2>מעוניינים בהרצאה?</h2>
+  <p style="margin-bottom: 40px;">צרו קשר לפרטים נוספים ולתיאום הרצאה</p>
+  <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+    <a href="tel:+972505202715" class="cta-button">📞 התקשרו: 050-5202715</a>
+    <a href="https://wa.me/972505202715" class="cta-button">💬 WhatsApp</a>
+  </div>
+</section>
+
+</body>
+</html>
