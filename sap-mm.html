@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>SAP S/4HANA MM – תרגול</title><style>
+:root{
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --text:#172033;
+  --muted:#64748b;
+  --accent:#0f766e;
+  --accent2:#0ea5e9;
+  --ok:#15803d;
+  --bad:#b91c1c;
+  --border:#dbe3ea;
+  --shadow:0 8px 24px rgba(15,23,42,.08);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, "Noto Sans Hebrew", sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+header{
+  background:linear-gradient(135deg,#0f766e,#0ea5e9);
+  color:white;
+  padding:24px 16px 20px;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 6px 20px rgba(15,118,110,.25);
+}
+header h1{margin:0 0 6px;font-size:24px}
+header p{margin:0;opacity:.95;font-size:14px}
+.wrap{max-width:920px;margin:0 auto;padding:16px}
+nav{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin:14px 0 18px;
+}
+button,.btn{
+  border:0;
+  border-radius:12px;
+  padding:12px 14px;
+  font-size:15px;
+  cursor:pointer;
+  transition:.2s;
+}
+nav button{
+  background:white;
+  color:var(--text);
+  box-shadow:var(--shadow);
+}
+nav button.active{background:#0f766e;color:white}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  margin-bottom:14px;
+  box-shadow:var(--shadow);
+}
+h2{font-size:21px;margin:0 0 12px}
+h3{font-size:17px;margin:16px 0 8px}
+.small{color:var(--muted);font-size:14px}
+.term{
+  background:#eef8f7;
+  border-right:4px solid var(--accent);
+  padding:10px 12px;
+  border-radius:10px;
+  margin:8px 0;
+}
+.term b{color:#0f4f4a}
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+  font-size:14px;
+}
+th,td{border-bottom:1px solid var(--border);padding:10px;text-align:right;vertical-align:top}
+th{background:#f8fafc}
+.quiz-option{
+  display:block;
+  width:100%;
+  text-align:right;
+  background:#f8fafc;
+  border:1px solid var(--border);
+  margin:8px 0;
+}
+.quiz-option:hover{background:#eef6ff}
+.correct{background:#dcfce7!important;border-color:#86efac!important}
+.wrong{background:#fee2e2!important;border-color:#fca5a5!important}
+.primary{background:var(--accent);color:white}
+.secondary{background:#e2e8f0;color:#0f172a}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row>*{flex:1}
+.progress{
+  height:10px;
+  background:#e2e8f0;
+  border-radius:999px;
+  overflow:hidden;
+  margin:10px 0 4px;
+}
+.progress>div{height:100%;background:linear-gradient(90deg,#0f766e,#0ea5e9);width:0%}
+.flash{
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:24px;
+  cursor:pointer;
+}
+.flash .front{font-size:25px;font-weight:700}
+.flash .back{display:none;font-size:18px;margin-top:12px;color:#334155}
+.flash.flipped .back{display:block}
+.flash.flipped .hint{display:none}
+.badge{
+  display:inline-block;
+  background:#e0f2fe;
+  color:#075985;
+  border-radius:999px;
+  padding:4px 9px;
+  font-size:12px;
+  margin:2px;
+}
+.hidden{display:none}
+.scorebox{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin:12px 0;
+}
+.scorebox div{
+  background:#f8fafc;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+}
+footer{padding:30px 16px;text-align:center;color:var(--muted);font-size:13px}
+@media(max-width:650px){
+  nav{grid-template-columns:repeat(2,1fr)}
+  header h1{font-size:21px}
+  .wrap{padding:12px}
+  .scorebox{grid-template-columns:1fr}
+}
+</style></head><body><header>
+<div class="wrap" style="padding:0">
+<h1>SAP S/4HANA MM – סיכום ותרגול</h1>
+<p>מותאם לחומר שלמדנו עד עכשיו · RTL · עובד גם בלי אינטרנט</p>
+</div>
+</header><div class="wrap">
+<nav>
+<button class="active" data-tab="summary">סיכום</button>
+<button data-tab="flashcards">כרטיסיות</button>
+<button data-tab="quiz">תרגול</button>
+<button data-tab="progress">התקדמות</button>
+</nav>
+<section id="summary">
+<div class="card">
+<h2>1. מבנה ארגוני</h2>
+<div class="term"><b>Company Code</b> – החברה המשפטית/חשבונאית.</div>
+<div class="term"><b>Plant</b> – אתר, מפעל, סניף או יחידה תפעולית.</div>
+<div class="term"><b>Storage Location</b> – מקום אחסון בתוך ה־Plant.</div>
+<div class="term"><b>Purchasing Organization</b> – ארגון הרכש שאחראי על קניות, ספקים ותנאי רכש.</div>
+<div class="term"><b>Purchasing Group</b> – הקניין או קבוצת הקניינים שמטפלים בפועל ברכש.</div>
+<p><b>זיכרון קצר:</b> Company Code = מי החברה · Plant = איפה הפעילות · Storage Location = איפה המלאי · Purchasing Organization = מי מנהל את הרכש · Purchasing Group = מי הקניין.</p>
+</div>
+<div class="card">
+<h2>2. תהליך רכש בסיסי</h2>
+<div class="term"><b>PR – Purchase Requisition</b> – בקשת רכש פנימית.</div>
+<div class="term"><b>PO – Purchase Order</b> – הזמנת רכש לספק.</div>
+<div class="term"><b>GR – Goods Receipt</b> – קבלת סחורה.</div>
+<p><b>רצף בסיסי:</b> PR → Approval → PO → Goods Receipt → Invoice</p>
+<p><b>Partial Delivery</b> – אספקה חלקית. למשל PO של 100 ו־GR של 60, נשארו 40 פתוחות.</p>
+<p><b>Overdelivery Tolerance</b> – סטייה מותרת בכמות אספקה מעבר לכמות שהוזמנה.</p>
+</div>
+<div class="card">
+<h2>3. Material Master – כרטיס חומר</h2>
+<p>Material Master אחד יכול להיות מורחב לכמה Plants.</p>
+<div class="term"><b>Material Type</b> – קובע איך החומר מתנהג במערכת.</div>
+<table>
+<tbody><tr><th>קוד</th><th>שם מלא</th><th>דוגמה</th></tr>
+<tr><td>ROH</td><td>Raw Material</td><td>חומר גלם</td></tr>
+<tr><td>HALB</td><td>Semi-Finished Product</td><td>מוצר חצי מוגמר</td></tr>
+<tr><td>FERT</td><td>Finished Product</td><td>מוצר מוגמר שהחברה מייצרת</td></tr>
+<tr><td>HAWA</td><td>Trading Goods</td><td>סחורה שקונים מוכנה מספק</td></tr>
+<tr><td>VERP</td><td>Packaging Material</td><td>חומרי אריזה</td></tr>
+</tbody></table>
+<div class="term"><b>Material Group</b> – סיווג עסקי, למשל Office Furniture או IT Equipment.</div>
+<div class="term"><b>Base Unit of Measure</b> – יחידת המידה הבסיסית לניהול מלאי, למשל EA = Each.</div>
+<p>לדוגמה: 1 BOX = 100 EA. אם מזמינים 20 BOX, המלאי הוא 2,000 EA.</p>
+</div>
+<div class="card">
+<h2>4. Material Master Views</h2>
+<span class="badge">Basic Data</span>
+<span class="badge">Purchasing</span>
+<span class="badge">MRP</span>
+<span class="badge">Storage</span>
+<span class="badge">Accounting</span>
+<p><b>Basic Data</b> בדרך כלל כולל נתונים כלליים כמו Description ו־Base Unit.</p>
+<p><b>Purchasing / MRP</b> יכולים לכלול נתונים שונים לפי Plant, למשל Purchasing Group או Safety Stock.</p>
+</div>
+<div class="card">
+<h2>5. ספקים ומקורות אספקה</h2>
+<div class="term"><b>BP – Business Partner</b> – הספק ב־S/4HANA.</div>
+<div class="term"><b>Purchasing Info Record</b> – הקשר Material + Supplier, כולל מחיר, זמן אספקה, יחידת הזמנה ותנאים.</div>
+<div class="term"><b>Source List</b> – אילו ספקים מאושרים או מועדפים לחומר.</div>
+<div class="term"><b>Quota Arrangement</b> – איך לחלק את הרכש בין כמה מקורות, למשל 80% / 20%.</div>
+<p><b>זיכרון קצר:</b> Info Record = תנאים מול הספק · Source List = ממי מותר לקנות · Quota Arrangement = כמה לקחת מכל אחד.</p>
+</div>
+<div class="card">
+<h2>6. MRP – Material Requirements Planning</h2>
+<p>מטרתו לחשב <b>כמה חומר צריך ומתי</b>.</p>
+<div class="term"><b>Safety Stock</b> – מלאי ביטחון.</div>
+<div class="term"><b>Reorder Point</b> – נקודת הזמנה מחדש.</div>
+<table>
+<tbody><tr><th>קוד</th><th>שם מלא</th><th>משמעות</th></tr>
+<tr><td>PD</td><td>Material Requirements Planning</td><td>תכנון לפי דרישות עתידיות</td></tr>
+<tr><td>VB</td><td>Manual Reorder Point Planning</td><td>החברה קובעת ידנית את נקודת ההזמנה</td></tr>
+<tr><td>VM</td><td>Automatic Reorder Point Planning</td><td>SAP מחשבת את נקודת ההזמנה לפי צריכה היסטורית</td></tr>
+</tbody></table>
+</div>
+<div class="card">
+<h2>7. Lot Size – גודל מנת הזמנה</h2>
+<div class="term"><b>EX – Lot-for-Lot Order Quantity</b> – מזמינים בדיוק את הכמות החסרה.</div>
+<div class="term"><b>FX – Fixed Lot Size</b> – מזמינים במנות קבועות.</div>
+<div class="term"><b>Minimum Lot Size</b> – מינימום למנה.</div>
+<div class="term"><b>Maximum Lot Size</b> – מקסימום למנה.</div>
+</div>
+<div class="card">
+<h2>8. Procurement Type – סוג אספקה</h2>
+<table>
+<tbody><tr><th>קוד</th><th>שם מלא</th><th>משמעות</th></tr>
+<tr><td>F</td><td>External Procurement</td><td>רכש חיצוני מספק</td></tr>
+<tr><td>E</td><td>In-House Production</td><td>ייצור פנימי</td></tr>
+<tr><td>X</td><td>Both Procurement Types</td><td>גם רכש חיצוני וגם ייצור פנימי</td></tr>
+</tbody></table>
+</div>
+<div class="card">
+<h2>9. תהליכי רכש מיוחדים</h2>
+<div class="term"><b>Stock Transfer</b> – העברת מלאי בין Plants.</div>
+<div class="term"><b>Subcontracting</b> – שולחים חומרים לספק והוא מייצר עבורנו.</div>
+<div class="term"><b>Consignment</b> – המלאי נמצא אצלנו אך שייך לספק עד הצריכה.</div>
+</div>
+<div class="card">
+<h2>10. PO Document Types &amp; Item Categories</h2>
+<div class="term"><b>NB – Standard Purchase Order</b> – הזמנת רכש רגילה.</div>
+<div class="term"><b>UB – Stock Transport Order</b> – הזמנת העברת מלאי בין Plants.</div>
+<p><b>Document Type</b> = סוג המסמך כולו.</p>
+<p><b>Item Category</b> = איך שורה ספציפית במסמך מתנהגת.</p>
+<p>Item Categories מרכזיות: Standard, Subcontracting, Consignment, Stock Transfer.</p>
+</div>
+<div class="card">
+<h2>11. Account Assignment Category – קטגוריית שיוך עלות</h2>
+<table>
+<tbody><tr><th>קוד</th><th>שם מלא</th><th>מתי</th></tr>
+<tr><td>K</td><td>Cost Center</td><td>הוצאה למחלקה / מרכז עלות</td></tr>
+<tr><td>P</td><td>Project</td><td>הוצאה לפרויקט</td></tr>
+<tr><td>A</td><td>Asset</td><td>רכישת נכס</td></tr>
+<tr><td>F</td><td>Order / Internal Order</td><td>מעקב הוצאה לפי הזמנה פנימית</td></tr>
+<tr><td>ריק</td><td>Stock Procurement</td><td>רכישה למלאי</td></tr>
+</tbody></table>
+<p><b>זיכרון קצר:</b> K = מחלקה · P = פרויקט · A = נכס · ריק = מלאי.</p>
+</div>
+</section>
+<section class="hidden" id="flashcards">
+<div class="card">
+<h2>כרטיסיות חזרה</h2>
+<p class="small">לחצי על הכרטיס כדי לחשוף את התשובה.</p>
+<div class="card flash" id="flash">
+<div class="front">PR</div>
+<div class="back">Purchase Requisition – בקשת רכש פנימית</div>
+<div class="hint small">לחצי להצגת התשובה</div>
+</div>
+<div class="row">
+<button class="secondary" id="prevCard">הקודם</button>
+<button class="primary" id="nextCard">הבא</button>
+</div>
+<div class="small" id="cardCounter" style="text-align:center;margin-top:8px">1 מתוך 32</div>
+</div>
+</section>
+<section class="hidden" id="quiz">
+<div class="card">
+<h2>תרגול רב־ברירה</h2>
+<div class="progress"><div id="quizBar" style="width: 0%;"></div></div>
+<div class="small" id="quizCounter">שאלה 1 מתוך 24</div>
+<h3 id="question">עובד מבקש 5 מחשבים. איזה מסמך נוצר קודם?</h3>
+<div id="options"><button class="quiz-option">PO – Purchase Order</button><button class="quiz-option">PR – Purchase Requisition</button><button class="quiz-option">GR – Goods Receipt</button></div>
+<div class="small" id="feedback" style="margin-top:10px"></div>
+<button class="primary hidden" id="nextQ" style="margin-top:12px;width:100%">שאלה הבאה</button>
+</div>
+</section>
+<section class="hidden" id="progress">
+<div class="card">
+<h2>ההתקדמות שלך</h2>
+<div class="scorebox">
+<div><b id="answered">0</b><br/><span class="small">שאלות שנענו</span></div>
+<div><b id="correctCount">0</b><br/><span class="small">תשובות נכונות</span></div>
+<div><b id="percent">0%</b><br/><span class="small">הצלחה</span></div>
+</div>
+<button class="secondary" id="resetProgress" style="width:100%">איפוס התקדמות</button>
+</div>
+</section>
+</div><footer>נבנה במיוחד לסיכום SAP S/4HANA MM שלמדנו עד עכשיו.</footer><script>
+const flashcards = [
+  ["PR", "Purchase Requisition – בקשת רכש פנימית"],
+  ["PO", "Purchase Order – הזמנת רכש לספק"],
+  ["GR", "Goods Receipt – קבלת סחורה"],
+  ["BP", "Business Partner – הספק ב־S/4HANA"],
+  ["MRP", "Material Requirements Planning – תכנון דרישות חומר"],
+  ["Plant", "אתר, מפעל, סניף או יחידה תפעולית"],
+  ["Storage Location", "מקום אחסון בתוך ה־Plant"],
+  ["Purchasing Organization", "ארגון הרכש שאחראי על קניות, ספקים ותנאי רכש"],
+  ["Purchasing Group", "הקניין או קבוצת הקניינים"],
+  ["ROH", "Raw Material – חומר גלם"],
+  ["HALB", "Semi-Finished Product – מוצר חצי מוגמר"],
+  ["FERT", "Finished Product – מוצר מוגמר שהחברה מייצרת"],
+  ["HAWA", "Trading Goods – סחורה שנקנית מוכנה מספק"],
+  ["Purchasing Info Record", "הקשר Material + Supplier, כולל מחיר ותנאים"],
+  ["Source List", "רשימת ספקים מאושרים/מועדפים לחומר"],
+  ["Quota Arrangement", "חלוקת רכש בין כמה מקורות אספקה"],
+  ["PD", "Material Requirements Planning – תכנון לפי דרישות עתידיות"],
+  ["VB", "Manual Reorder Point Planning – נקודת הזמנה ידנית"],
+  ["VM", "Automatic Reorder Point Planning – SAP מחשבת את נקודת ההזמנה"],
+  ["EX", "Lot-for-Lot Order Quantity – להזמין בדיוק את החוסר"],
+  ["FX", "Fixed Lot Size – להזמין במנות קבועות"],
+  ["F – Procurement Type", "External Procurement – רכש חיצוני"],
+  ["E – Procurement Type", "In-House Production – ייצור פנימי"],
+  ["X – Procurement Type", "Both Procurement Types – גם חיצוני וגם פנימי"],
+  ["NB", "Standard Purchase Order – הזמנת רכש רגילה"],
+  ["UB", "Stock Transport Order – הזמנת העברת מלאי"],
+  ["K", "Cost Center – הוצאה למחלקה/מרכז עלות"],
+  ["P", "Project – הוצאה לפרויקט"],
+  ["A", "Asset – רכישת נכס"],
+  ["Consignment", "המלאי אצלנו אך שייך לספק עד הצריכה"],
+  ["Subcontracting", "שולחים חומרים לספק והוא מייצר עבורנו"],
+  ["Stock Transfer", "העברת מלאי בין Plants"]
+];
+
+const questions = [
+  {
+    q:"עובד מבקש 5 מחשבים. איזה מסמך נוצר קודם?",
+    o:["PO – Purchase Order","PR – Purchase Requisition","GR – Goods Receipt"],
+    a:1, e:"PR היא בקשת רכש פנימית."
+  },
+  {
+    q:"הוזמנו 100 יחידות והתקבלו 60. מה קורה?",
+    o:["ההזמנה נסגרת","נשארות 40 יחידות פתוחות","אי אפשר לבצע GR"],
+    a:1, e:"זו Partial Delivery – אספקה חלקית."
+  },
+  {
+    q:"אותו חומר קיים בשני Plants. מה נכון?",
+    o:["יוצרים שני Material Masters","Material Master אחד שמורחב לשני Plants","יוצרים BP חדש"],
+    a:1, e:"אותו חומר נשאר אותו Material Master."
+  },
+  {
+    q:"חברה קונה כיסא מוכן מספק. מה ה־Material Type?",
+    o:["FERT – Finished Product","ROH – Raw Material","HAWA – Trading Goods"],
+    a:2, e:"HAWA מתאים לסחורה שנרכשת מוכנה מספק."
+  },
+  {
+    q:"מה ההבדל בין Material Type ל־Material Group?",
+    o:["אין הבדל","Type קובע התנהגות מערכתית, Group הוא סיווג עסקי","Group קובע רק מחיר"],
+    a:1, e:"Material Type = התנהגות. Material Group = סיווג."
+  },
+  {
+    q:"1 BOX = 100 EA. הוזמנו 20 BOX. כמה EA במלאי?",
+    o:["100","2,000","20"],
+    a:1, e:"20 × 100 = 2,000 EA."
+  },
+  {
+    q:"מה שומר Purchasing Info Record?",
+    o:["רק כתובת הספק","תנאי חומר–ספק כמו מחיר וזמן אספקה","רשימת כל ה־Plants"],
+    a:1, e:"Info Record מתאר את הקשר Material + Supplier."
+  },
+  {
+    q:"מה קובעת Source List?",
+    o:["מי מאושר כמקור אספקה","כמה אחוז לקנות מכל ספק","איזה Plant סגור"],
+    a:0, e:"Source List = ממי מותר או רצוי לקנות."
+  },
+  {
+    q:"מה קובע Quota Arrangement?",
+    o:["כתובת הספק","חלוקת הרכש בין ספקים","Material Type"],
+    a:1, e:"למשל 80% מספק A ו־20% מספק B."
+  },
+  {
+    q:"MRP Type שבו החברה קובעת ידנית Reorder Point הוא:",
+    o:["PD","VB","VM"],
+    a:1, e:"VB = Manual Reorder Point Planning."
+  },
+  {
+    q:"MRP Type שבו SAP מחשבת את Reorder Point לפי צריכה היסטורית הוא:",
+    o:["VM","PD","VB"],
+    a:0, e:"VM = Automatic Reorder Point Planning."
+  },
+  {
+    q:"Lot Size EX אומר:",
+    o:["להזמין תמיד 100","להזמין בדיוק את הכמות החסרה","לא להזמין בכלל"],
+    a:1, e:"EX = Lot-for-Lot Order Quantity."
+  },
+  {
+    q:"חסרות 30 יחידות ו־Minimum Lot Size הוא 50. כמה לפחות להזמין?",
+    o:["30","50","80"],
+    a:1, e:"Minimum Lot Size קובע רצפה להזמנה."
+  },
+  {
+    q:"Procurement Type F הוא:",
+    o:["In-House Production","External Procurement","Both Procurement Types"],
+    a:1, e:"F = External Procurement."
+  },
+  {
+    q:"רעננה שולחת מלאי לחיפה. איזה תהליך?",
+    o:["Subcontracting","Consignment","Stock Transfer"],
+    a:2, e:"Stock Transfer = העברת מלאי בין Plants."
+  },
+  {
+    q:"שולחים עץ וברגים לספק והוא מייצר עבורנו שולחן. זה:",
+    o:["Subcontracting","Consignment","Standard"],
+    a:0, e:"זה בדיוק תהליך Subcontracting."
+  },
+  {
+    q:"המלאי נמצא אצלנו אבל עדיין שייך לספק עד השימוש. זה:",
+    o:["Stock Transfer","Consignment","FERT"],
+    a:1, e:"Consignment."
+  },
+  {
+    q:"NB הוא:",
+    o:["Standard Purchase Order","Stock Transport Order","Business Partner"],
+    a:0, e:"NB = Standard Purchase Order."
+  },
+  {
+    q:"UB הוא:",
+    o:["Standard Purchase Order","Stock Transport Order","Purchase Requisition"],
+    a:1, e:"UB = Stock Transport Order."
+  },
+  {
+    q:"מה ההבדל בין Document Type ל־Item Category?",
+    o:["Document Type למסמך כולו, Item Category לשורה","אין הבדל","Item Category קובע Company Code"],
+    a:0, e:"Document Type = סוג המסמך. Item Category = התנהגות השורה."
+  },
+  {
+    q:"מחלקת HR קונה 5 כיסאות לשימוש שלה. Account Assignment Category?",
+    o:["K – Cost Center","P – Project","A – Asset"],
+    a:0, e:"K = Cost Center."
+  },
+  {
+    q:"חומר שנקנה במיוחד לפרויקט בנייה. Account Assignment Category?",
+    o:["A – Asset","P – Project","K – Cost Center"],
+    a:1, e:"P = Project."
+  },
+  {
+    q:"מכונת ייצור שתשמש את החברה שנים. Account Assignment Category?",
+    o:["A – Asset","K – Cost Center","ללא שיוך"],
+    a:0, e:"A = Asset."
+  },
+  {
+    q:"5,000 ברגים שנכנסים למלאי. Account Assignment Category?",
+    o:["K","P","בדרך כלל ללא שיוך"],
+    a:2, e:"רכישה למלאי בדרך כלל ללא Account Assignment."
+  }
+];
+
+const sections = [...document.querySelectorAll("section")];
+document.querySelectorAll("nav button").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    sections.forEach(s=>s.classList.add("hidden"));
+    document.getElementById(btn.dataset.tab).classList.remove("hidden");
+    if(btn.dataset.tab==="progress") updateProgress();
+  })
+});
+
+let cardIndex = 0;
+const flash = document.getElementById("flash");
+function renderCard(){
+  flash.classList.remove("flipped");
+  flash.querySelector(".front").textContent = flashcards[cardIndex][0];
+  flash.querySelector(".back").textContent = flashcards[cardIndex][1];
+  document.getElementById("cardCounter").textContent = `${cardIndex+1} מתוך ${flashcards.length}`;
+}
+flash.addEventListener("click",()=>flash.classList.toggle("flipped"));
+document.getElementById("nextCard").addEventListener("click",()=>{cardIndex=(cardIndex+1)%flashcards.length;renderCard()});
+document.getElementById("prevCard").addEventListener("click",()=>{cardIndex=(cardIndex-1+flashcards.length)%flashcards.length;renderCard()});
+renderCard();
+
+let qIndex = 0;
+let locked = false;
+let stats = JSON.parse(localStorage.getItem("sapmm_stats") || '{"answered":0,"correct":0}');
+function saveStats(){localStorage.setItem("sapmm_stats", JSON.stringify(stats))}
+function renderQuestion(){
+  locked=false;
+  const q = questions[qIndex];
+  document.getElementById("question").textContent=q.q;
+  document.getElementById("quizCounter").textContent=`שאלה ${qIndex+1} מתוך ${questions.length}`;
+  document.getElementById("quizBar").style.width=((qIndex)/questions.length*100)+"%";
+  document.getElementById("feedback").textContent="";
+  document.getElementById("nextQ").classList.add("hidden");
+  const options=document.getElementById("options");
+  options.innerHTML="";
+  q.o.forEach((opt,i)=>{
+    const b=document.createElement("button");
+    b.className="quiz-option";
+    b.textContent=opt;
+    b.onclick=()=>answer(i,b);
+    options.appendChild(b);
+  });
+}
+function answer(i,btn){
+  if(locked) return;
+  locked=true;
+  const q=questions[qIndex];
+  const all=[...document.querySelectorAll(".quiz-option")];
+  all[q.a].classList.add("correct");
+  if(i!==q.a) btn.classList.add("wrong");
+  stats.answered++;
+  if(i===q.a) stats.correct++;
+  saveStats();
+  document.getElementById("feedback").textContent = (i===q.a ? "נכון. " : "לא נכון. ") + q.e;
+  document.getElementById("nextQ").classList.remove("hidden");
+}
+document.getElementById("nextQ").addEventListener("click",()=>{
+  qIndex=(qIndex+1)%questions.length;
+  renderQuestion();
+});
+renderQuestion();
+
+function updateProgress(){
+  document.getElementById("answered").textContent=stats.answered;
+  document.getElementById("correctCount").textContent=stats.correct;
+  const p=stats.answered?Math.round(stats.correct/stats.answered*100):0;
+  document.getElementById("percent").textContent=p+"%";
+}
+document.getElementById("resetProgress").addEventListener("click",()=>{
+  stats={answered:0,correct:0}; saveStats(); updateProgress();
+});
+</script></body></html>
