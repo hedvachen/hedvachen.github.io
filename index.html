@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-
-<html dir="rtl" lang="he"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>חדווה חן | הטמעת AI, אוטומציה והדרכת משתמשים</title>
-<meta content="תיק עבודות: פתרונות AI, אוטומציות, אפליקציות ומדריכים דיגיטליים בעברית." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<meta name="description" content="תיק עבודות: פתרונות AI, אוטומציות, אפליקציות ומדריכים דיגיטליים בעברית.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#fbf8fb;--surf:#fff;--ink:#241225;--mute:#665a68;--line:#e8dde8;--acc:#b3125f;--acc2:#7a1fa2;--soft:#f6e9f2;--deep:#2a1030;color-scheme:light dark}
 @media(prefers-color-scheme:dark){:root{--bg:#150b18;--surf:#201225;--ink:#f6ecf5;--mute:#b9a8bb;--line:#3a2540;--acc:#ff6fb1;--acc2:#c58bff;--soft:#2c1832;--deep:#0e0711}}
@@ -60,27 +59,33 @@ footer{border-top:1px solid var(--line);padding:32px 0 calc(32px + env(safe-area
 <p class="sub">הטמעת בינה מלאכותית, אוטומציה והדרכת משתמשים</p>
 <p class="lead">מדריכה ומטמיעת מערכות, עם ניסיון בהוראת תוכנות אדריכליות ובליווי עלייה לאוויר של מערכות ארגוניות. כיום אני בונה פתרונות מבוססי AI, תהליכים אוטומטיים וכלי למידה, ומנגישה אותם לקהלים מגוונים.</p>
 <div class="cta"><a class="btn p" href="#work">לכל הפרויקטים</a><a class="btn" href="mailto:hedva3d@gmail.com">יצירת קשר</a></div></div>
-<aside aria-label="המחשה: זרימת עבודה אוטומטית מתוך MailPilot" class="flow"><h2>כך נראית זרימה אוטומטית (מתוך MailPilot)</h2>
+<aside class="flow" aria-label="המחשה: זרימת עבודה אוטומטית מתוך MailPilot"><h2>כך נראית זרימה אוטומטית (מתוך MailPilot)</h2>
 <div class="step on"><b>1</b><span>פנייה נכנסת במייל<small>המערכת מזהה את הבקשה</small></span></div>
 <div class="step on"><b>2</b><span>Make מחבר מידע עסקי<small>נתונים מטופס Google Forms</small></span></div>
 <div class="step on"><b>3</b><span>הכנת תשובה<small>מבוססת על ידע מאושר</small></span></div>
 <div class="step on"><b>4</b><span>אישור אנושי<small>לפני כל שליחה</small></span></div></aside></div>
-<section aria-labelledby="h-work" id="work"><h2 class="t" id="h-work">פרויקטים ודוגמאות עבודה</h2><p class="intro">מדריכים דיגיטליים, אפליקציות, אוטומציות ותוכן. חלק מהתוצרים פתוחים לצפייה, ואת האחרים אשמח להציג לפי בקשה.</p>
-<div class="ctrl" hidden="" id="ctrl"><input aria-label="חיפוש בתיק העבודות" id="q" placeholder="חיפוש, למשל SAP, SketchUp או Make" type="search"/>
-<div aria-label="סינון לפי תחום" class="fl" role="group"><button aria-pressed="true" data-f="all" type="button">הכול</button><button aria-pressed="false" data-f="guides" type="button">מדריכים</button><button aria-pressed="false" data-f="apps" type="button">אפליקציות</button><button aria-pressed="false" data-f="automation" type="button">אוטומציה</button><button aria-pressed="false" data-f="content" type="button">תוכן ומוצרים</button></div></div>
+
+
+
+<section id="work" aria-labelledby="h-work"><h2 class="t" id="h-work">פרויקטים ודוגמאות עבודה</h2><p class="intro">מדריכים דיגיטליים, אפליקציות, אוטומציות ותוכן. חלק מהתוצרים פתוחים לצפייה, ואת האחרים אשמח להציג לפי בקשה.</p>
+<div class="ctrl" id="ctrl" hidden><input type="search" id="q" placeholder="חיפוש, למשל SAP, SketchUp או Make" aria-label="חיפוש בתיק העבודות">
+<div class="fl" role="group" aria-label="סינון לפי תחום"><button type="button" data-f="all" aria-pressed="true">הכול</button><button type="button" data-f="guides" aria-pressed="false">מדריכים</button><button type="button" data-f="apps" aria-pressed="false">אפליקציות</button><button type="button" data-f="automation" aria-pressed="false">אוטומציה</button><button type="button" data-f="content" aria-pressed="false">תוכן ומוצרים</button></div></div>
 <p class="cnt" id="cnt" role="status"></p><ul id="cards"></ul></section>
-<section aria-labelledby="h-tools" id="tools"><h2 class="t" id="h-tools">כלים והדגמות</h2><p class="intro">הכלים שאני עובדת איתם, ושתי הדגמות המחשה לתהליכי עבודה.</p>
+
+<section id="tools" aria-labelledby="h-tools"><h2 class="t" id="h-tools">כלים והדגמות</h2><p class="intro">הכלים שאני עובדת איתם, ושתי הדגמות המחשה לתהליכי עבודה.</p>
 <div class="tools">
 <div class="panel"><h3>בינה מלאכותית יוצרת</h3><div class="chips"><span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">Manus</span></div><p>ChatGPT להכנת חומרי הדרכה, ניסוח הסברים, פיתוח רעיונות ושיפור תוצרים, וכן ליצירת תוכן חזותי. Claude לעבודה על תוכן לסרטונים. היכרות גם עם Gemini, Copilot ו־Manus.</p></div>
 <div class="panel"><h3>פיתוח, אוטומציה ופרסום</h3><div class="chips"><span class="chip">Base44</span><span class="chip">Make</span><span class="chip">Zapier</span><span class="chip">GitHub Pages</span><span class="chip">Gumroad</span></div><p>Base44 לפיתוח אפליקציות. Make ו־Zapier לחיבור בין מערכות: מה מפעיל את התהליך, איזה מידע עובר ואיזו פעולה מתבצעת. GitHub ו־GitHub Pages לפיתוח ופרסום מדריכי הסטודנטים (<a href="https://github.com/hedvachen" style="color:var(--acc);font-weight:700">פרופיל GitHub</a>). Gumroad לפרסום ומכירה של מוצרים דיגיטליים.</p></div>
 <div class="panel" id="hr"><h3>הדגמה: קליטת עובדים ב־Base44</h3><p>כשמסמך דורש תיקון, לוח הבקרה מציג שהצעד הבא הוא העלאת גרסה מתוקנת על ידי העובד. כשחוזה ממתין לחתימה, מוצג אם הפעולה מוטלת על העובד או על המנהל. כך מסך אחד מעניק להנהלה תמונת מצב, ולצוות רשימת משימות ברורה.</p></div>
 <div class="panel" id="mailpilot"><h3>הדגמה: MailPilot ב־Make</h3><p>פנייה במייל מפעילה את התהליך. Make משלב את תוכן הפנייה עם מידע עסקי שהוזן בטופס, ומעביר אותו לשלב המענה. בהרחבה המתוכננת, Google Sheets ישמש מאגר ידע מאושר ורשימת תשובות הממתינות לבדיקה. פנייה ללא מידע מתאים תועבר לבירור אנושי.</p></div></div></section>
-<section aria-labelledby="h-app" id="approach"><h2 class="t" id="h-app">הגישה שלי להטמעת AI והדרכת משתמשים</h2><p class="intro">הדרכה אפקטיבית מתחילה במשימה אמיתית ומסתיימת בעבודה עצמאית.</p>
+
+<section id="approach" aria-labelledby="h-app"><h2 class="t" id="h-app">הגישה שלי להטמעת AI והדרכת משתמשים</h2><p class="intro">הדרכה אפקטיבית מתחילה במשימה אמיתית ומסתיימת בעבודה עצמאית.</p>
 <ol class="how"><li><strong>מתחילים ממשימה מהשגרה</strong>בוחרים פעולה שהמשתמשים כבר מבצעים, כדי שהכלי החדש יענה על צורך קיים.</li>
 <li><strong>מתנסים ובודקים יחד</strong>בסדנה מפעילים את הכלי על דוגמה מעשית, ובוחנים יחד את התוצר.</li>
 <li><strong>משאירים מדריך ואוספים משוב</strong>כל משתתף מקבל מדריך קצר לעבודה עצמאית. לאחר ההתנסות אני בודקת מה הצליחו לבצע לבד ואיפה נדרש ליווי נוסף.</li></ol></section>
-<footer><div><a class="btn p" href="mailto:hedva3d@gmail.com">hedva3d@gmail.com</a> <button class="btn" hidden="" id="pr" type="button">הדפסה או שמירה כ־PDF</button></div><p>© חדווה חן · תיק עבודות AI והטמעת מערכות</p></footer>
-</main><a aria-label="חזרה לראש הדף" class="btn p up" href="#top">↑ לראש הדף</a>
+
+<footer><div><a class="btn p" href="mailto:hedva3d@gmail.com">hedva3d@gmail.com</a> <button class="btn" type="button" id="pr" hidden>הדפסה או שמירה כ־PDF</button></div><p>© חדווה חן · תיק עבודות AI והטמעת מערכות</p></footer>
+</main><a class="btn p up" href="#top" aria-label="חזרה לראש הדף">↑ לראש הדף</a>
 <script>
 const M=s=>'mailto:hedva3d@gmail.com?subject='+encodeURIComponent(s);
 const P=[
@@ -88,7 +93,7 @@ const P=[
 {c:'guides',t:'מדריך AutoCAD בעברית',tag:'מדריך דיגיטלי',d:'מדריך לסטודנטים הלומדים שרטוט ב־AutoCAD, בגישה של עזרה נגישה בעברית לעבודה עצמאית. זמין בגרסאות Windows ו־Mac.',l:[['AutoCAD 2026 בעברית','https://hedvachen.github.io/AutoCAD2026-guide-Hebrew/'],['AutoCAD 2026 ל־Mac','https://hedvachen.github.io/AutoCAD2026-MAC-guide-Hebrew/']]},
 {c:'guides',t:'מדריך SketchUp בעברית',tag:'מדריך דיגיטלי',d:'חומר עזר לסטודנטים הלומדים מידול ב־SketchUp, שנועד ללוות את הלימוד והעבודה בתוכנה.',l:[['מדריך מלא ל־SketchUp 2026','https://hedvachen.github.io/sketchup2026-FULLguide-Hebrew/'],['מדריך SketchUp 2026 בעברית','https://hedvachen.github.io/sketchup2026-guide-Hebrew/']]},
 {c:'guides',t:'חומרי הדרכה ל־Enscape',tag:'מדריך דיגיטלי',d:'חומרי הדרכה לסטודנטים בתחום ההדמיה האדריכלית, שפותחו כחלק מהוראת תוכנות עיצוב ותכנון.',l:[['מדריך Enscape 2026 בעברית','https://hedvachen.github.io/Enscape2026-guide-Hebrew/']]},
-{c:'apps',w:1,t:'אפליקציית לימוד ליישום SAP S/4HANA MM',tag:'כלי לימוד אישי',d:'אפליקציה שנבנתה עבורי בסיוע ChatGPT ללימוד ותרגול יישום SAP, עם דגש על תהליכי רכש ומלאי וחיבורם ל־FI. התרגול כלל דרישת רכש, הזמנת רכש, קליטת סחורה ותנועות מלאי.',l:[['בקשת הדגמה',M('בקשת הדגמה – SAP S/4HANA MM')]]},
+{c:'apps',w:1,t:'אפליקציית לימוד ליישום SAP S/4HANA MM',tag:'כלי לימוד אישי',d:'אפליקציה שנבנתה עבורי בסיוע ChatGPT ללימוד ותרגול יישום SAP, עם דגש על תהליכי רכש ומלאי וחיבורם ל־FI. התרגול כלל דרישת רכש, הזמנת רכש, קליטת סחורה ותנועות מלאי.',l:[['פתיחת אפליקציית התרגול','sap-mm.html']]},
 {c:'apps',t:'JobPilot | חיפוש משרות',tag:'אב־טיפוס',d:'אפליקציה לאיתור משרות לפי תחום ואזור, שפותחה בסיוע AI. בדקתי את ההתאמה לתפקידי הדרכה והטמעת מערכות מידע, ואת דרכי הצגת קישורי ההגשה לצד התוצאות.',l:[['בקשת הצגת אב־טיפוס',M('בקשת הצגת אב־טיפוס – JobPilot')]]},
 {c:'apps',t:'PeopleFlow | ניהול עובדים',tag:'גרסת בדיקה',d:'אפיון מערכת לניהול מחזור חיי העובד: קליטה, תיק עובד, נוכחות וחופשות. בסיוע ChatGPT הוכנה חבילת התקנה לבדיקות.',l:[['בקשת הדגמה',M('בקשת הדגמה – PeopleFlow')]]},
 {c:'apps',w:1,t:'מערכת קליטת עובדים',tag:'Base44',d:'אפליקציה למעקב אחר קליטת עובדים במרכזים קהילתיים, שפיתחתי ב־Base44. הדאשבורד מרכז טופס 101, בדיקת מסמכים, אישור משאבי אנוש וחתימות, ומציג לכל קליטה מה נדרש ומי אחראי לצעד הבא.',l:[['תיאור ההדגמה','#hr']]},
