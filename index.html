@@ -1,42 +1,44 @@
 <!doctype html>
 <html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>חדווה חן | הטמעת AI, אוטומציה והדרכת משתמשים</title>
-<meta name="description" content="תיק עבודות: פתרונות AI, אוטומציות, אפליקציות ומדריכים דיגיטליים בעברית.">
+<meta name="description" content="הטמעת מערכות AI, אוטומציה והדרכת משתמשים: תיק העבודות של חדווה חן, עם אפליקציות, אוטומציות ומדריכים דיגיטליים בעברית.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0c0710;--bg2:#150b1c;--card:#1b1024cc;--line:#ffffff14;--ink:#f7f0f8;--mute:#b3a3bb;--acc:#ff5ea8;--acc2:#a86bff;--acc3:#5ed4ff;--grad:linear-gradient(120deg,var(--acc),var(--acc2) 55%,var(--acc3));color-scheme:dark}
+:root{--bg:#0c0710;--bg2:#150b1c;--card:#1b1024cc;--line:#ffffff14;--ink:#f9f4fb;--mute:#d4c6da;--acc:#ff5ea8;--acc2:#a86bff;--acc3:#5ed4ff;--grad:linear-gradient(120deg,var(--acc),var(--acc2) 55%,var(--acc3));color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.7 Heebo,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.85 Heebo,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}h1,h2,h3,p{margin:0}
 .wrap{max-width:1180px;margin:auto;padding:0 clamp(16px,4vw,32px)}
 :focus-visible{outline:3px solid var(--acc3);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;inset-inline-start:12px;top:-80px;z-index:30;background:var(--grad);color:#1c0b16;font-weight:800;padding:12px 20px;border-radius:12px;text-decoration:none;transition:top .2s}
+.skip:focus{top:12px}
 .aurora{position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 45% at 85% -5%,#ff5ea833,transparent 60%),radial-gradient(50% 40% at 8% 12%,#a86bff2e,transparent 60%),radial-gradient(45% 35% at 50% 105%,#5ed4ff1f,transparent 60%)}
 .grid-bg{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(#ffffff07 1px,transparent 1px),linear-gradient(90deg,#ffffff07 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(75% 60% at 50% 0%,#000 30%,transparent 100%)}
 .bar{position:sticky;top:0;z-index:10;padding-top:env(safe-area-inset-top);background:#0c0710b8;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:66px}
 .brand{font-weight:900;font-size:19px;text-decoration:none;white-space:nowrap}.brand i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 nav{display:flex;gap:4px;flex-wrap:wrap}
-nav a{padding:8px 15px;border-radius:99px;text-decoration:none;font-weight:500;font-size:14.5px;color:var(--mute);transition:.2s}
+nav a{padding:8px 15px;border-radius:99px;text-decoration:none;font-weight:600;font-size:15.5px;color:var(--mute);transition:.2s}
 nav a:hover{color:var(--ink);background:#ffffff10}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 24px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:700 15.5px Heebo,sans-serif;text-decoration:none;cursor:pointer;transition:.25s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 24px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:700 16.5px Heebo,sans-serif;text-decoration:none;cursor:pointer;transition:.25s}
 .btn:hover{transform:translateY(-2px);border-color:#ffffff3d}
 .btn.p{background:var(--grad);border:none;color:#1c0b16;box-shadow:0 12px 32px -10px #ff5ea866}
 .btn.p:hover{box-shadow:0 16px 40px -10px #ff5ea899}
 .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,48px);align-items:center;padding:clamp(40px,7vw,88px) 0 clamp(30px,4vw,50px)}
-.kick{display:inline-flex;align-items:center;gap:8px;padding:5px 16px;border-radius:99px;border:1px solid var(--line);background:#ffffff08;font-weight:700;font-size:13.5px;color:var(--mute);margin-bottom:18px}
+.kick{display:inline-flex;align-items:center;gap:8px;padding:5px 16px;border-radius:99px;border:1px solid var(--line);background:#ffffff08;font-weight:700;font-size:15px;color:var(--mute);margin-bottom:18px}
 .kick:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc3);box-shadow:0 0 12px var(--acc3);animation:pulse 2.2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 h1{font-size:clamp(46px,8vw,84px);line-height:1.04;letter-spacing:-.03em;font-weight:900;background:linear-gradient(160deg,#fff 30%,#ffb9d9 70%,#a86bff);-webkit-background-clip:text;background-clip:text;color:transparent}
 .sub{font-size:clamp(20px,3.2vw,30px);font-weight:800;margin-top:8px}
 .sub .rot{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{color:var(--mute);max-width:36em;margin:16px 0 26px;font-size:17px}
+.lead{color:#e3d8e8;max-width:36em;margin:16px 0 26px;font-size:19px;line-height:1.8}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 .flow{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(18px,3vw,26px);backdrop-filter:blur(10px);box-shadow:0 30px 60px -30px #000}
-.flow h2{font-size:16px;font-weight:800;color:var(--mute);margin-bottom:16px}
+.flow h2{font-size:17px;font-weight:800;color:var(--mute);margin-bottom:16px}
 .step{display:flex;gap:14px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:16px;margin-bottom:10px;background:#ffffff05;transition:.3s}
-.step small{display:block;font-weight:400;color:var(--mute);font-size:12.5px;line-height:1.4}
-.step b{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:var(--grad);color:#1c0b16;flex:none;font-size:15px}
+.step small{display:block;font-weight:400;color:var(--mute);font-size:14px;line-height:1.55}
+.step b{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:var(--grad);color:#1c0b16;flex:none;font-size:16px}
 .step:last-child{margin-bottom:0}
 .step.on{animation:glow 4.8s infinite}.step:nth-of-type(2){animation-delay:1.2s}.step:nth-of-type(3){animation-delay:2.4s}.step:nth-of-type(4){animation-delay:3.6s}
 @keyframes glow{0%,30%,100%{border-color:#ffffff14;background:#ffffff05}12%{border-color:#ff5ea8aa;background:#ff5ea81a;transform:scale(1.02)}}
@@ -47,45 +49,45 @@ h2.t em{font-style:normal;background:var(--grad);-webkit-background-clip:text;ba
 .ctrl{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:20px}
 .ctrl input{flex:1 1 240px;min-height:50px;padding:8px 22px;border-radius:99px;border:1.5px solid var(--line);background:#ffffff08;color:var(--ink);font:inherit;transition:.2s}
 .ctrl input:focus{border-color:var(--acc2);outline:none;background:#ffffff0d}
-.ctrl input::placeholder{color:#8b7c93}
+.ctrl input::placeholder{color:#c9bad0}
 .fl{display:flex;flex-wrap:wrap;gap:8px}
-.fl button{min-height:44px;padding:6px 18px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:var(--mute);font:700 14.5px Heebo,sans-serif;cursor:pointer;transition:.2s}
+.fl button{min-height:44px;padding:6px 18px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:var(--mute);font:700 15.5px Heebo,sans-serif;cursor:pointer;transition:.2s}
 .fl button:hover{color:var(--ink);border-color:#ffffff3d}
 .fl button[aria-pressed=true]{background:var(--grad);color:#1c0b16;border-color:transparent}
-.cnt{color:var(--mute);font-size:13.5px;margin-bottom:16px}
+.cnt{color:var(--mute);font-size:14.5px;margin-bottom:16px}
 #cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;list-style:none;margin:0;padding:0}
 .card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;transition:transform .3s,border-color .3s,box-shadow .3s;overflow:hidden}
 .card:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad);opacity:0;transition:.3s}
 .card:hover{transform:translateY(-5px);border-color:#ffffff2e;box-shadow:0 24px 50px -24px #a86bff55}
 .card:hover:before{opacity:1}
 .card.w{grid-column:span 2}
-.tag{align-self:flex-start;padding:3px 13px;border-radius:99px;background:#a86bff1f;border:1px solid #a86bff38;color:#d9c2ff;font-weight:700;font-size:12.5px;margin-bottom:12px}
-.card h3{font-size:19px}
-.card p{color:var(--mute);font-size:14.5px;margin:10px 0 18px;flex:1}
+.tag{align-self:flex-start;padding:3px 13px;border-radius:99px;background:#a86bff1f;border:1px solid #a86bff38;color:#e6d8ff;font-weight:700;font-size:14px;margin-bottom:12px}
+.card h3{font-size:21px}
+.card p{color:#ddd2e2;font-size:15.5px;line-height:1.7;margin:10px 0 18px;flex:1}
 .ln{display:flex;flex-wrap:wrap;gap:8px}
-.ln a{display:inline-flex;align-items:center;min-height:42px;padding:6px 16px;border-radius:12px;background:#ffffff0c;border:1px solid var(--line);font-weight:700;font-size:14px;text-decoration:none;transition:.2s}
+.ln a{display:inline-flex;align-items:center;min-height:42px;padding:6px 16px;border-radius:12px;background:#ffffff0c;border:1px solid var(--line);font-weight:700;font-size:15px;text-decoration:none;transition:.2s}
 .ln a:hover{background:var(--grad);color:#1c0b16;border-color:transparent}
 .ln a.x:after{content:"\2197";margin-inline-start:6px}
 .tools{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,3vw,28px);transition:.3s}
 .panel:hover{border-color:#ffffff2e}
 .panel:target{outline:2px solid var(--acc2);outline-offset:4px}
-.panel h3{font-size:19px;margin-bottom:8px}
-.panel p{color:var(--mute);font-size:15px}
-.panel p a{color:var(--acc3);font-weight:700}
+.panel h3{font-size:21px;margin-bottom:8px}
+.panel p{color:#ddd2e2;font-size:16px;line-height:1.75}
+.panel p a{color:#8fe0ff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
-.chip{padding:4px 13px;border-radius:99px;background:#ffffff0c;border:1px solid var(--line);font-weight:700;font-size:13px}
+.chip{padding:4px 13px;border-radius:99px;background:#ffffff0c;border:1px solid var(--line);font-weight:700;font-size:14px}
 .how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s;list-style:none;padding:0;margin:0}
-.how li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;color:var(--mute);font-size:15px;transition:.3s}
+.how li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;color:#ddd2e2;font-size:16.5px;line-height:1.75;transition:.3s}
 .how li:hover{border-color:#ffffff2e;transform:translateY(-4px)}
 .how li:before{content:"0" counter(s);display:block;font-size:34px;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
-.how strong{display:block;color:var(--ink);font-size:18px;margin-bottom:6px}
+.how strong{display:block;color:var(--ink);font-size:19px;margin-bottom:6px}
 .cta-band{margin:clamp(30px,5vw,60px) 0;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(28px,5vw,52px);text-align:center;position:relative;overflow:hidden}
 .cta-band:before{content:"";position:absolute;inset:-40% -10%;background:radial-gradient(40% 60% at 50% 0%,#a86bff2e,transparent 70%);pointer-events:none}
 .cta-band h2{font-size:clamp(26px,4vw,38px);font-weight:900;margin-bottom:10px}
 .cta-band p{color:var(--mute);margin-bottom:22px}
 footer{border-top:1px solid var(--line);padding:30px 0 calc(30px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
-footer p{color:var(--mute);font-size:13.5px}
+footer p{color:var(--mute);font-size:15px}
 .up{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:9;box-shadow:0 10px 26px -8px #ff5ea877}
 [hidden]{display:none!important}
 html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
@@ -94,16 +96,16 @@ html.js .rv.in{opacity:1;transform:none}
 @media(max-width:620px){html{scroll-padding-top:16px}.bar{position:static}.bar .wrap{flex-direction:column;align-items:flex-start;padding-block:10px}#cards{grid-template-columns:1fr}.cta .btn,.ln a{flex:1 1 100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step,.kick:before{animation:none!important}*{transition:none!important}html.js .rv{opacity:1;transform:none}}
 @media print{.bar,.ctrl,.up,.cta,.aurora,.grid-bg{display:none!important}body{background:#fff;color:#000}.flow{display:none}.card,.panel{break-inside:avoid;background:#fff;color:#000;border-color:#ccc}li[hidden]{display:flex!important}}
-</style></head><body id="top">
+</style></head><body id="top"><a class="skip" href="#main">דילוג לתוכן הדף</a>
 <div class="aurora" aria-hidden="true"></div><div class="grid-bg" aria-hidden="true"></div>
 <header class="bar"><div class="wrap"><a class="brand" href="#top">חדווה חן<i dir="ltr"> / AI</i></a>
-<nav aria-label="ניווט ראשי"><a href="#work">פרויקטים</a><a href="#tools">כלים והדגמות</a><a href="#approach">שיטת עבודה</a><a href="mailto:hedva3d@gmail.com">יצירת קשר</a></nav></div></header>
-<main class="wrap">
+<nav aria-label="ניווט ראשי"><a href="#work">פרויקטים</a><a href="#tools">כלים והדגמות</a><a href="#approach">שיטת עבודה</a><a href="https://wa.me/972505202715" aria-label="יצירת קשר בוואטסאפ">יצירת קשר</a></nav></div></header>
+<main class="wrap" id="main">
 <div class="hero"><div>
 <span class="kick">תיק עבודות מקצועי</span><h1>חדווה חן</h1>
 <p class="sub">הטמעת <span class="rot" id="rot">בינה מלאכותית</span>, אוטומציה והדרכת משתמשים</p>
-<p class="lead">מדריכה ומטמיעת מערכות, עם ניסיון בהוראת תוכנות אדריכליות ובליווי עלייה לאוויר של מערכות ארגוניות. כיום אני בונה פתרונות מבוססי AI, תהליכים אוטומטיים וכלי למידה, ומנגישה אותם לקהלים מגוונים.</p>
-<div class="cta"><a class="btn p" href="#work">לכל הפרויקטים</a><a class="btn" href="mailto:hedva3d@gmail.com">יצירת קשר</a></div></div>
+<p class="lead">הטמעת מערכות מידע, הדרכת משתמשים ובניית פתרונות AI: זו העבודה של חדווה חן. עם ניסיון רב בהוראת תוכנות אדריכליות ובליווי עלייה לאוויר של מערכות ארגוניות, חדווה בונה כיום פתרונות מבוססי בינה מלאכותית, תהליכים אוטומטיים וכלי למידה, ומנגישה אותם לקהלים מגוונים.</p>
+<div class="cta"><a class="btn p" href="#work">לכל הפרויקטים</a><a class="btn" href="https://wa.me/972505202715" aria-label="מעבר לשיחת וואטסאפ עם חדווה">וואטסאפ ישיר</a></div></div>
 <aside class="flow rv" aria-label="המחשה: זרימת עבודה אוטומטית מתוך MailPilot"><h2>כך נראית זרימה אוטומטית (מתוך MailPilot)</h2>
 <div class="step on"><b>1</b><span>פנייה נכנסת במייל<small>המערכת מזהה את הבקשה</small></span></div>
 <div class="step on"><b>2</b><span>Make מחבר מידע עסקי<small>נתונים מטופס Google Forms</small></span></div>
@@ -127,9 +129,9 @@ html.js .rv.in{opacity:1;transform:none}
 <li class="rv"><strong>מתנסים ובודקים יחד</strong>בסדנה מפעילים את הכלי על דוגמה מעשית, ובוחנים יחד את התוצר.</li>
 <li class="rv"><strong>משאירים מדריך ואוספים משוב</strong>כל משתתף מקבל מדריך קצר לעבודה עצמאית. לאחר ההתנסות אני בודקת מה הצליחו לבצע לבד ואיפה נדרש ליווי נוסף.</li></ol></section>
 
-<div class="cta-band rv"><h2>רוצים לראות איך זה עובד אצלכם?</h2><p>אשמח להציג את הפרויקטים ולהתאים תהליך לארגון שלכם.</p><a class="btn p" href="mailto:hedva3d@gmail.com">hedva3d@gmail.com</a></div>
+<div class="cta-band rv"><h2>רוצים לראות איך זה עובד אצלכם?</h2><p>אשמח להציג את הפרויקטים ולהתאים תהליך לארגון שלכם.</p><a class="btn p" href="https://wa.me/972505202715" aria-label="שליחת הודעת וואטסאפ לחדווה">שליחת הודעה בוואטסאפ</a></div>
 
-<footer><div><a class="btn p" href="mailto:hedva3d@gmail.com">hedva3d@gmail.com</a> <button class="btn" type="button" id="pr" hidden>הדפסה או שמירה כ־PDF</button></div><p>© חדווה חן · תיק עבודות AI והטמעת מערכות</p></footer>
+<footer><div><a class="btn p" href="https://wa.me/972505202715" aria-label="שליחת הודעת וואטסאפ לחדווה">וואטסאפ: 050-520-2715</a> <button class="btn" type="button" id="pr" hidden>הדפסה או שמירה כ־PDF</button></div><p>© חדווה חן · תיק עבודות AI והטמעת מערכות</p></footer>
 </main><a class="btn p up" href="#top" aria-label="חזרה לראש הדף">↑ לראש הדף</a>
 <script>
 const M=s=>'mailto:hedva3d@gmail.com?subject='+encodeURIComponent(s);
