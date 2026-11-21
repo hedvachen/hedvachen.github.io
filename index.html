@@ -3,86 +3,131 @@
 <title>חדווה חן | הטמעת AI, אוטומציה והדרכת משתמשים</title>
 <meta name="description" content="תיק עבודות: פתרונות AI, אוטומציות, אפליקציות ומדריכים דיגיטליים בעברית.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbf8fb;--surf:#fff;--ink:#241225;--mute:#665a68;--line:#e8dde8;--acc:#b3125f;--acc2:#7a1fa2;--soft:#f6e9f2;--deep:#2a1030;color-scheme:light dark}
-@media(prefers-color-scheme:dark){:root{--bg:#150b18;--surf:#201225;--ink:#f6ecf5;--mute:#b9a8bb;--line:#3a2540;--acc:#ff6fb1;--acc2:#c58bff;--soft:#2c1832;--deep:#0e0711}}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Heebo,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}h1,h2,h3,p{margin:0}.wrap{max-width:1160px;margin:auto;padding:0 clamp(16px,4vw,32px)}
-:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
-.bar{position:sticky;top:0;z-index:5;padding-top:env(safe-area-inset-top);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
-.brand{font-weight:900;font-size:19px;text-decoration:none;white-space:nowrap}.brand i{font-style:normal;color:var(--acc)}
-nav{display:flex;gap:4px;flex-wrap:wrap}nav a{padding:8px 14px;border-radius:99px;text-decoration:none;font-weight:500;font-size:15px;color:var(--mute);transition:.2s}nav a:hover{background:var(--soft);color:var(--ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:8px 22px;border-radius:99px;border:1.5px solid var(--line);background:var(--surf);color:var(--ink);font:700 15px Heebo,sans-serif;text-decoration:none;cursor:pointer;transition:.2s}
-.btn:hover{border-color:var(--acc);transform:translateY(-1px)}.btn.p{background:linear-gradient(120deg,var(--acc),var(--acc2));border-color:transparent;color:#fff}
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,64px);align-items:center;padding:clamp(40px,8vw,96px) 0 clamp(32px,5vw,56px)}
-.kick{display:inline-block;padding:5px 14px;border-radius:99px;background:var(--soft);color:var(--acc);font-weight:700;font-size:14px;margin-bottom:18px}
-h1{font-size:clamp(46px,8vw,92px);line-height:1;font-weight:900;letter-spacing:-.035em;margin-bottom:18px}
-.sub{font-size:clamp(20px,2.6vw,27px);font-weight:700;line-height:1.35;max-width:21em;margin-bottom:16px}
-.lead{color:var(--mute);max-width:36em;margin-bottom:28px}.cta{display:flex;flex-wrap:wrap;gap:10px}
-.flow{background:var(--deep);color:#f6ecf5;border-radius:28px;padding:26px;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px color-mix(in srgb,var(--acc) 55%,transparent)}
-.flow:before{content:"";position:absolute;inset-inline-start:-30%;top:-40%;width:80%;aspect-ratio:1;background:radial-gradient(circle,#b3125f66,transparent 65%)}
-.flow h2{font-size:14px;font-weight:500;color:#c9b3cc;margin-bottom:18px;position:relative}
-.step{position:relative;display:flex;gap:14px;align-items:center;padding:13px 16px;border:1px solid #ffffff1f;border-radius:16px;background:#ffffff0d;margin-bottom:22px;font-weight:700}
-.step:not(:last-child):after{content:"";position:absolute;inset-inline-start:30px;top:100%;height:22px;width:2px;background:linear-gradient(#ff6fb1,#ffffff22)}
-.step small{display:block;font-weight:400;color:#c9b3cc;font-size:13px;line-height:1.4}.step b{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,#ff6fb1,#c58bff);color:#241225;flex:none}
-.step:last-child{margin-bottom:0}.step.on{animation:glow 4.8s infinite}.step:nth-of-type(2){animation-delay:1.2s}.step:nth-of-type(3){animation-delay:2.4s}.step:nth-of-type(4){animation-delay:3.6s}
-@keyframes glow{0%,30%,100%{border-color:#ffffff1f}12%{border-color:#ff6fb1;background:#ff6fb122}}
-section{padding:clamp(36px,6vw,72px) 0}h2.t{font-size:clamp(28px,4.4vw,44px);line-height:1.15;letter-spacing:-.02em;font-weight:900;margin-bottom:10px}.intro{color:var(--mute);max-width:40em;margin-bottom:28px}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.panel{background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,3vw,30px)}.panel:target{outline:2px solid var(--acc);outline-offset:4px}
-h3{font-size:21px;line-height:1.3;margin-bottom:10px}.panel ul{margin:0;padding-inline-start:20px;color:var(--mute)}.panel li{margin-bottom:8px}.panel li::marker{color:var(--acc)}
-.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.chip{padding:3px 12px;border-radius:99px;background:var(--soft);font-weight:700;font-size:14px}
-.ctrl{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:22px}
-.ctrl input{flex:1 1 260px;min-height:48px;padding:8px 20px;border-radius:99px;border:1.5px solid var(--line);background:var(--surf);color:var(--ink);font:inherit}
-.fl{display:flex;flex-wrap:wrap;gap:8px}.fl button{min-height:44px;padding:6px 18px;border-radius:99px;border:1.5px solid var(--line);background:var(--surf);color:var(--ink);font:700 15px Heebo,sans-serif;cursor:pointer}.fl button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.cnt{color:var(--mute);font-size:14px;margin-bottom:14px}
-#cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;list-style:none;margin:0;padding:0}
-.card{display:flex;flex-direction:column;background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:24px;transition:.25s}.card:hover{border-color:var(--acc);box-shadow:0 18px 40px -24px var(--acc)}
-.card.w{grid-column:span 2}.tag{align-self:flex-start;padding:2px 12px;border-radius:99px;background:var(--soft);color:var(--acc);font-weight:700;font-size:13px;margin-bottom:12px}
-.card p{color:var(--mute);font-size:15.5px;margin-bottom:18px;flex:1}.ln{display:flex;flex-wrap:wrap;gap:8px}
-.ln a{display:inline-flex;align-items:center;min-height:42px;padding:6px 16px;border-radius:12px;background:var(--soft);font-weight:700;font-size:14.5px;text-decoration:none;transition:.2s}.ln a:hover{background:var(--acc);color:#fff}.ln a.x:after{content:"\2197";margin-inline-start:6px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s;list-style:none;padding:0;margin:0}.how li{counter-increment:s;background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:24px;color:var(--mute)}.how li:before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;font-weight:900;margin-bottom:14px}.how strong{display:block;color:var(--ink);font-size:19px;margin-bottom:6px}
-footer{border-top:1px solid var(--line);padding:32px 0 calc(32px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}footer p{color:var(--mute);font-size:14px}
-.up{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:4;box-shadow:0 10px 24px -8px var(--acc)}[hidden]{display:none!important}
-@media(max-width:900px){.hero,.grid2,.tools,.how{grid-template-columns:1fr}#cards{grid-template-columns:repeat(2,1fr)}.card.w{grid-column:auto}}
+:root{--bg:#0c0710;--bg2:#150b1c;--card:#1b1024cc;--line:#ffffff14;--ink:#f7f0f8;--mute:#b3a3bb;--acc:#ff5ea8;--acc2:#a86bff;--acc3:#5ed4ff;--grad:linear-gradient(120deg,var(--acc),var(--acc2) 55%,var(--acc3));color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.7 Heebo,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}h1,h2,h3,p{margin:0}
+.wrap{max-width:1180px;margin:auto;padding:0 clamp(16px,4vw,32px)}
+:focus-visible{outline:3px solid var(--acc3);outline-offset:3px;border-radius:8px}
+.aurora{position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 45% at 85% -5%,#ff5ea833,transparent 60%),radial-gradient(50% 40% at 8% 12%,#a86bff2e,transparent 60%),radial-gradient(45% 35% at 50% 105%,#5ed4ff1f,transparent 60%)}
+.grid-bg{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(#ffffff07 1px,transparent 1px),linear-gradient(90deg,#ffffff07 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(75% 60% at 50% 0%,#000 30%,transparent 100%)}
+.bar{position:sticky;top:0;z-index:10;padding-top:env(safe-area-inset-top);background:#0c0710b8;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:66px}
+.brand{font-weight:900;font-size:19px;text-decoration:none;white-space:nowrap}.brand i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav a{padding:8px 15px;border-radius:99px;text-decoration:none;font-weight:500;font-size:14.5px;color:var(--mute);transition:.2s}
+nav a:hover{color:var(--ink);background:#ffffff10}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 24px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:700 15.5px Heebo,sans-serif;text-decoration:none;cursor:pointer;transition:.25s}
+.btn:hover{transform:translateY(-2px);border-color:#ffffff3d}
+.btn.p{background:var(--grad);border:none;color:#1c0b16;box-shadow:0 12px 32px -10px #ff5ea866}
+.btn.p:hover{box-shadow:0 16px 40px -10px #ff5ea899}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,48px);align-items:center;padding:clamp(40px,7vw,88px) 0 clamp(30px,4vw,50px)}
+.kick{display:inline-flex;align-items:center;gap:8px;padding:5px 16px;border-radius:99px;border:1px solid var(--line);background:#ffffff08;font-weight:700;font-size:13.5px;color:var(--mute);margin-bottom:18px}
+.kick:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc3);box-shadow:0 0 12px var(--acc3);animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1{font-size:clamp(46px,8vw,84px);line-height:1.04;letter-spacing:-.03em;font-weight:900;background:linear-gradient(160deg,#fff 30%,#ffb9d9 70%,#a86bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(20px,3.2vw,30px);font-weight:800;margin-top:8px}
+.sub .rot{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mute);max-width:36em;margin:16px 0 26px;font-size:17px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.flow{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(18px,3vw,26px);backdrop-filter:blur(10px);box-shadow:0 30px 60px -30px #000}
+.flow h2{font-size:16px;font-weight:800;color:var(--mute);margin-bottom:16px}
+.step{display:flex;gap:14px;align-items:center;padding:12px 14px;border:1px solid var(--line);border-radius:16px;margin-bottom:10px;background:#ffffff05;transition:.3s}
+.step small{display:block;font-weight:400;color:var(--mute);font-size:12.5px;line-height:1.4}
+.step b{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:var(--grad);color:#1c0b16;flex:none;font-size:15px}
+.step:last-child{margin-bottom:0}
+.step.on{animation:glow 4.8s infinite}.step:nth-of-type(2){animation-delay:1.2s}.step:nth-of-type(3){animation-delay:2.4s}.step:nth-of-type(4){animation-delay:3.6s}
+@keyframes glow{0%,30%,100%{border-color:#ffffff14;background:#ffffff05}12%{border-color:#ff5ea8aa;background:#ff5ea81a;transform:scale(1.02)}}
+section{padding:clamp(40px,6vw,76px) 0}
+h2.t{font-size:clamp(28px,4.4vw,42px);line-height:1.15;letter-spacing:-.02em;font-weight:900;margin-bottom:10px}
+h2.t em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro{color:var(--mute);max-width:40em;margin-bottom:26px}
+.ctrl{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:20px}
+.ctrl input{flex:1 1 240px;min-height:50px;padding:8px 22px;border-radius:99px;border:1.5px solid var(--line);background:#ffffff08;color:var(--ink);font:inherit;transition:.2s}
+.ctrl input:focus{border-color:var(--acc2);outline:none;background:#ffffff0d}
+.ctrl input::placeholder{color:#8b7c93}
+.fl{display:flex;flex-wrap:wrap;gap:8px}
+.fl button{min-height:44px;padding:6px 18px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:var(--mute);font:700 14.5px Heebo,sans-serif;cursor:pointer;transition:.2s}
+.fl button:hover{color:var(--ink);border-color:#ffffff3d}
+.fl button[aria-pressed=true]{background:var(--grad);color:#1c0b16;border-color:transparent}
+.cnt{color:var(--mute);font-size:13.5px;margin-bottom:16px}
+#cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;list-style:none;margin:0;padding:0}
+.card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;transition:transform .3s,border-color .3s,box-shadow .3s;overflow:hidden}
+.card:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad);opacity:0;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#ffffff2e;box-shadow:0 24px 50px -24px #a86bff55}
+.card:hover:before{opacity:1}
+.card.w{grid-column:span 2}
+.tag{align-self:flex-start;padding:3px 13px;border-radius:99px;background:#a86bff1f;border:1px solid #a86bff38;color:#d9c2ff;font-weight:700;font-size:12.5px;margin-bottom:12px}
+.card h3{font-size:19px}
+.card p{color:var(--mute);font-size:14.5px;margin:10px 0 18px;flex:1}
+.ln{display:flex;flex-wrap:wrap;gap:8px}
+.ln a{display:inline-flex;align-items:center;min-height:42px;padding:6px 16px;border-radius:12px;background:#ffffff0c;border:1px solid var(--line);font-weight:700;font-size:14px;text-decoration:none;transition:.2s}
+.ln a:hover{background:var(--grad);color:#1c0b16;border-color:transparent}
+.ln a.x:after{content:"\2197";margin-inline-start:6px}
+.tools{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,3vw,28px);transition:.3s}
+.panel:hover{border-color:#ffffff2e}
+.panel:target{outline:2px solid var(--acc2);outline-offset:4px}
+.panel h3{font-size:19px;margin-bottom:8px}
+.panel p{color:var(--mute);font-size:15px}
+.panel p a{color:var(--acc3);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{padding:4px 13px;border-radius:99px;background:#ffffff0c;border:1px solid var(--line);font-weight:700;font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s;list-style:none;padding:0;margin:0}
+.how li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;color:var(--mute);font-size:15px;transition:.3s}
+.how li:hover{border-color:#ffffff2e;transform:translateY(-4px)}
+.how li:before{content:"0" counter(s);display:block;font-size:34px;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
+.how strong{display:block;color:var(--ink);font-size:18px;margin-bottom:6px}
+.cta-band{margin:clamp(30px,5vw,60px) 0;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(28px,5vw,52px);text-align:center;position:relative;overflow:hidden}
+.cta-band:before{content:"";position:absolute;inset:-40% -10%;background:radial-gradient(40% 60% at 50% 0%,#a86bff2e,transparent 70%);pointer-events:none}
+.cta-band h2{font-size:clamp(26px,4vw,38px);font-weight:900;margin-bottom:10px}
+.cta-band p{color:var(--mute);margin-bottom:22px}
+footer{border-top:1px solid var(--line);padding:30px 0 calc(30px + env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+footer p{color:var(--mute);font-size:13.5px}
+.up{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:9;box-shadow:0 10px 26px -8px #ff5ea877}
+[hidden]{display:none!important}
+html.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+html.js .rv.in{opacity:1;transform:none}
+@media(max-width:920px){.hero,.tools,.how{grid-template-columns:1fr}#cards{grid-template-columns:repeat(2,1fr)}.card.w{grid-column:auto}}
 @media(max-width:620px){html{scroll-padding-top:16px}.bar{position:static}.bar .wrap{flex-direction:column;align-items:flex-start;padding-block:10px}#cards{grid-template-columns:1fr}.cta .btn,.ln a{flex:1 1 100%}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step{animation:none!important}*{transition:none!important}}
-@media print{.bar,.ctrl,.up,.cta,footer .btn{display:none!important}body{background:#fff;color:#000}.flow{display:none}.card,.panel{break-inside:avoid}li[hidden]{display:flex!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.step,.kick:before{animation:none!important}*{transition:none!important}html.js .rv{opacity:1;transform:none}}
+@media print{.bar,.ctrl,.up,.cta,.aurora,.grid-bg{display:none!important}body{background:#fff;color:#000}.flow{display:none}.card,.panel{break-inside:avoid;background:#fff;color:#000;border-color:#ccc}li[hidden]{display:flex!important}}
 </style></head><body id="top">
+<div class="aurora" aria-hidden="true"></div><div class="grid-bg" aria-hidden="true"></div>
 <header class="bar"><div class="wrap"><a class="brand" href="#top">חדווה חן<i dir="ltr"> / AI</i></a>
 <nav aria-label="ניווט ראשי"><a href="#work">פרויקטים</a><a href="#tools">כלים והדגמות</a><a href="#approach">שיטת עבודה</a><a href="mailto:hedva3d@gmail.com">יצירת קשר</a></nav></div></header>
 <main class="wrap">
 <div class="hero"><div>
 <span class="kick">תיק עבודות מקצועי</span><h1>חדווה חן</h1>
-<p class="sub">הטמעת בינה מלאכותית, אוטומציה והדרכת משתמשים</p>
+<p class="sub">הטמעת <span class="rot" id="rot">בינה מלאכותית</span>, אוטומציה והדרכת משתמשים</p>
 <p class="lead">מדריכה ומטמיעת מערכות, עם ניסיון בהוראת תוכנות אדריכליות ובליווי עלייה לאוויר של מערכות ארגוניות. כיום אני בונה פתרונות מבוססי AI, תהליכים אוטומטיים וכלי למידה, ומנגישה אותם לקהלים מגוונים.</p>
 <div class="cta"><a class="btn p" href="#work">לכל הפרויקטים</a><a class="btn" href="mailto:hedva3d@gmail.com">יצירת קשר</a></div></div>
-<aside class="flow" aria-label="המחשה: זרימת עבודה אוטומטית מתוך MailPilot"><h2>כך נראית זרימה אוטומטית (מתוך MailPilot)</h2>
+<aside class="flow rv" aria-label="המחשה: זרימת עבודה אוטומטית מתוך MailPilot"><h2>כך נראית זרימה אוטומטית (מתוך MailPilot)</h2>
 <div class="step on"><b>1</b><span>פנייה נכנסת במייל<small>המערכת מזהה את הבקשה</small></span></div>
 <div class="step on"><b>2</b><span>Make מחבר מידע עסקי<small>נתונים מטופס Google Forms</small></span></div>
 <div class="step on"><b>3</b><span>הכנת תשובה<small>מבוססת על ידע מאושר</small></span></div>
 <div class="step on"><b>4</b><span>אישור אנושי<small>לפני כל שליחה</small></span></div></aside></div>
 
-
-
-<section id="work" aria-labelledby="h-work"><h2 class="t" id="h-work">פרויקטים ודוגמאות עבודה</h2><p class="intro">מדריכים דיגיטליים, אפליקציות, אוטומציות ותוכן. חלק מהתוצרים פתוחים לצפייה, ואת האחרים אשמח להציג לפי בקשה.</p>
+<section id="work" aria-labelledby="h-work"><h2 class="t" id="h-work">פרויקטים ודוגמאות <em>עבודה</em></h2><p class="intro">מדריכים דיגיטליים, אפליקציות, אוטומציות ותוכן. חלק מהתוצרים פתוחים לצפייה, ואת האחרים אשמח להציג לפי בקשה.</p>
 <div class="ctrl" id="ctrl" hidden><input type="search" id="q" placeholder="חיפוש, למשל SAP, SketchUp או Make" aria-label="חיפוש בתיק העבודות">
 <div class="fl" role="group" aria-label="סינון לפי תחום"><button type="button" data-f="all" aria-pressed="true">הכול</button><button type="button" data-f="guides" aria-pressed="false">מדריכים</button><button type="button" data-f="apps" aria-pressed="false">אפליקציות</button><button type="button" data-f="automation" aria-pressed="false">אוטומציה</button><button type="button" data-f="content" aria-pressed="false">תוכן ומוצרים</button></div></div>
 <p class="cnt" id="cnt" role="status"></p><ul id="cards"></ul></section>
 
-<section id="tools" aria-labelledby="h-tools"><h2 class="t" id="h-tools">כלים והדגמות</h2><p class="intro">הכלים שאני עובדת איתם, ושתי הדגמות המחשה לתהליכי עבודה.</p>
+<section id="tools" aria-labelledby="h-tools"><h2 class="t" id="h-tools">כלים <em>והדגמות</em></h2><p class="intro">הכלים שאני עובדת איתם, ושתי הדגמות המחשה לתהליכי עבודה.</p>
 <div class="tools">
-<div class="panel"><h3>בינה מלאכותית יוצרת</h3><div class="chips"><span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">Manus</span></div><p>ChatGPT להכנת חומרי הדרכה, ניסוח הסברים, פיתוח רעיונות ושיפור תוצרים, וכן ליצירת תוכן חזותי. Claude לעבודה על תוכן לסרטונים. היכרות גם עם Gemini, Copilot ו־Manus.</p></div>
-<div class="panel"><h3>פיתוח, אוטומציה ופרסום</h3><div class="chips"><span class="chip">Base44</span><span class="chip">Make</span><span class="chip">Zapier</span><span class="chip">GitHub Pages</span><span class="chip">Gumroad</span></div><p>Base44 לפיתוח אפליקציות. Make ו־Zapier לחיבור בין מערכות: מה מפעיל את התהליך, איזה מידע עובר ואיזו פעולה מתבצעת. GitHub ו־GitHub Pages לפיתוח ופרסום מדריכי הסטודנטים (<a href="https://github.com/hedvachen" style="color:var(--acc);font-weight:700">פרופיל GitHub</a>). Gumroad לפרסום ומכירה של מוצרים דיגיטליים.</p></div>
-<div class="panel" id="hr"><h3>הדגמה: קליטת עובדים ב־Base44</h3><p>כשמסמך דורש תיקון, לוח הבקרה מציג שהצעד הבא הוא העלאת גרסה מתוקנת על ידי העובד. כשחוזה ממתין לחתימה, מוצג אם הפעולה מוטלת על העובד או על המנהל. כך מסך אחד מעניק להנהלה תמונת מצב, ולצוות רשימת משימות ברורה.</p></div>
-<div class="panel" id="mailpilot"><h3>הדגמה: MailPilot ב־Make</h3><p>פנייה במייל מפעילה את התהליך. Make משלב את תוכן הפנייה עם מידע עסקי שהוזן בטופס, ומעביר אותו לשלב המענה. בהרחבה המתוכננת, Google Sheets ישמש מאגר ידע מאושר ורשימת תשובות הממתינות לבדיקה. פנייה ללא מידע מתאים תועבר לבירור אנושי.</p></div></div></section>
+<div class="panel rv"><h3>בינה מלאכותית יוצרת</h3><div class="chips"><span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">Manus</span></div><p>ChatGPT להכנת חומרי הדרכה, ניסוח הסברים, פיתוח רעיונות ושיפור תוצרים, וכן ליצירת תוכן חזותי. Claude לעבודה על תוכן לסרטונים. היכרות גם עם Gemini, Copilot ו־Manus.</p></div>
+<div class="panel rv"><h3>פיתוח, אוטומציה ופרסום</h3><div class="chips"><span class="chip">Base44</span><span class="chip">Make</span><span class="chip">Zapier</span><span class="chip">GitHub Pages</span><span class="chip">Gumroad</span></div><p>Base44 לפיתוח אפליקציות. Make ו־Zapier לחיבור בין מערכות: מה מפעיל את התהליך, איזה מידע עובר ואיזו פעולה מתבצעת. GitHub ו־GitHub Pages לפיתוח ופרסום מדריכי הסטודנטים (<a href="https://github.com/hedvachen">פרופיל GitHub</a>). Gumroad לפרסום ומכירה של מוצרים דיגיטליים.</p></div>
+<div class="panel rv" id="hr"><h3>הדגמה: קליטת עובדים ב־Base44</h3><p>כשמסמך דורש תיקון, לוח הבקרה מציג שהצעד הבא הוא העלאת גרסה מתוקנת על ידי העובד. כשחוזה ממתין לחתימה, מוצג אם הפעולה מוטלת על העובד או על המנהל. כך מסך אחד מעניק להנהלה תמונת מצב, ולצוות רשימת משימות ברורה.</p></div>
+<div class="panel rv" id="mailpilot"><h3>הדגמה: MailPilot ב־Make</h3><p>פנייה במייל מפעילה את התהליך. Make משלב את תוכן הפנייה עם מידע עסקי שהוזן בטופס, ומעביר אותו לשלב המענה. בהרחבה המתוכננת, Google Sheets ישמש מאגר ידע מאושר ורשימת תשובות הממתינות לבדיקה. פנייה ללא מידע מתאים תועבר לבירור אנושי.</p></div></div></section>
 
-<section id="approach" aria-labelledby="h-app"><h2 class="t" id="h-app">הגישה שלי להטמעת AI והדרכת משתמשים</h2><p class="intro">הדרכה אפקטיבית מתחילה במשימה אמיתית ומסתיימת בעבודה עצמאית.</p>
-<ol class="how"><li><strong>מתחילים ממשימה מהשגרה</strong>בוחרים פעולה שהמשתמשים כבר מבצעים, כדי שהכלי החדש יענה על צורך קיים.</li>
-<li><strong>מתנסים ובודקים יחד</strong>בסדנה מפעילים את הכלי על דוגמה מעשית, ובוחנים יחד את התוצר.</li>
-<li><strong>משאירים מדריך ואוספים משוב</strong>כל משתתף מקבל מדריך קצר לעבודה עצמאית. לאחר ההתנסות אני בודקת מה הצליחו לבצע לבד ואיפה נדרש ליווי נוסף.</li></ol></section>
+<section id="approach" aria-labelledby="h-app"><h2 class="t" id="h-app">הגישה שלי להטמעת AI <em>והדרכת משתמשים</em></h2><p class="intro">הדרכה אפקטיבית מתחילה במשימה אמיתית ומסתיימת בעבודה עצמאית.</p>
+<ol class="how"><li class="rv"><strong>מתחילים ממשימה מהשגרה</strong>בוחרים פעולה שהמשתמשים כבר מבצעים, כדי שהכלי החדש יענה על צורך קיים.</li>
+<li class="rv"><strong>מתנסים ובודקים יחד</strong>בסדנה מפעילים את הכלי על דוגמה מעשית, ובוחנים יחד את התוצר.</li>
+<li class="rv"><strong>משאירים מדריך ואוספים משוב</strong>כל משתתף מקבל מדריך קצר לעבודה עצמאית. לאחר ההתנסות אני בודקת מה הצליחו לבצע לבד ואיפה נדרש ליווי נוסף.</li></ol></section>
+
+<div class="cta-band rv"><h2>רוצים לראות איך זה עובד אצלכם?</h2><p>אשמח להציג את הפרויקטים ולהתאים תהליך לארגון שלכם.</p><a class="btn p" href="mailto:hedva3d@gmail.com">hedva3d@gmail.com</a></div>
 
 <footer><div><a class="btn p" href="mailto:hedva3d@gmail.com">hedva3d@gmail.com</a> <button class="btn" type="button" id="pr" hidden>הדפסה או שמירה כ־PDF</button></div><p>© חדווה חן · תיק עבודות AI והטמעת מערכות</p></footer>
 </main><a class="btn p up" href="#top" aria-label="חזרה לראש הדף">↑ לראש הדף</a>
@@ -103,13 +148,19 @@ const P=[
 {c:'content',t:'חדשות AI – אחד ביום',tag:'אינסטגרם',d:'תוכן חזותי קצר בעברית שמסביר מה התחדש בכלי AI ומה אפשר לעשות איתו. הכותרות והדוגמאות נוסחו כך שיהיו מובנות גם לקהל ללא רקע טכנולוגי.',l:[['בקשת דוגמת תוכן',M('בקשת דוגמת תוכן – חדשות AI – אחד ביום')]]},
 {c:'apps',t:'LifePilot | ארגון לימודים ושגרה',tag:'פרויקט פרטי',d:'אפליקציה פרטית ב־Base44 לניהול משימות, מערכת שעות ואירועים. אחד התרחישים שנבדקו: זיהוי אירוע מתוך הודעה, אישורו והצגתו ביומן בשעה הנכונה. האפיון והבדיקות נעשו בסיוע ChatGPT.',l:[['פתיחת גרסת הניסיון','lifepilot.html']]},
 {c:'apps',t:'SupportFlow | עוזר לפניות תמיכה',tag:'תיק פרויקט',d:'תיק פרויקט עם אב־טיפוס ונתונים סינתטיים, שהוכן בסיוע AI. כולל אפיון תהליך תמיכה, בדיקות קבלה ומודל כדאיות. בתרחישי הבדיקה נמדדה התאמה של 65% מתוך 40 בדיקות.',l:[['פתיחת ההדגמה','supportflow.html'],['תיק הפרויקט PDF','supportflow-document.html']]}];
+document.documentElement.classList.add('js');
 const ul=document.getElementById('cards'),q=document.getElementById('q'),cnt=document.getElementById('cnt'),fb=[...document.querySelectorAll('.fl button')];let cat='all';
 const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const nz=s=>s.normalize('NFKC').toLowerCase().replace(/[־–—-]/g,' ');
-ul.innerHTML=P.map(p=>`<li class="card${p.w?' w':''}" data-c="${p.c}"><span class="tag">${p.tag}</span><h3>${p.t}</h3><p>${p.d}</p><div class="ln">${p.l.map(([a,h])=>`<a${h[0]=='#'||h.startsWith('mailto')?'':' class="x"'} href="${esc(h)}">${a}</a>`).join('')}</div></li>`).join('');
+ul.innerHTML=P.map(p=>`<li class="card rv${p.w?' w':''}" data-c="${p.c}"><span class="tag">${p.tag}</span><h3>${p.t}</h3><p>${p.d}</p><div class="ln">${p.l.map(([a,h])=>`<a${h[0]=='#'||h.startsWith('mailto')?'':' class="x"'} href="${esc(h)}">${a}</a>`).join('')}</div></li>`).join('');
 const rows=[...ul.children];
 function up(){const t=nz(q.value.trim()).split(/\s+/).filter(Boolean);let n=0;for(const r of rows){const s=nz(r.textContent);r.hidden=(cat!='all'&&r.dataset.c!=cat)||!t.every(x=>s.includes(x));if(!r.hidden)n++}
 cnt.textContent=n?`מוצגים ${n} מתוך ${rows.length} תוצרים`:'לא נמצאו תוצאות. נסו חיפוש אחר או בחרו ״הכול״.'}
 fb.forEach(b=>b.onclick=()=>{cat=b.dataset.f;fb.forEach(x=>x.setAttribute('aria-pressed',x==b));up()});
 q.oninput=up;document.getElementById('ctrl').hidden=false;const pr=document.getElementById('pr');pr.hidden=false;pr.onclick=()=>print();up();
+const words=['בינה מלאכותית','אוטומציה','הדרכת משתמשים','כלי למידה'];let wi=0;const rot=document.getElementById('rot');
+setInterval(()=>{wi=(wi+1)%words.length;rot.style.opacity=0;setTimeout(()=>{rot.textContent=words[wi];rot.style.opacity=1},260)},3000);rot.style.transition='opacity .25s';
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>el.classList.add('in')),2500);
 </script></body></html>
